@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Zafiyeti Örneği</title>
+    <link rel="stylesheet" href="style.css"> <!-- CSS dosyasını ekle -->
+</head>
+<body>
+    <div class="container">
+        <h1>Yazilim Guvenligi</h1>
+        <form id="nameForm">
+            <input type="text" id="nameInput" placeholder="İsminizi girin" required>
+            <button type="submit">Gönder</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="script.js"></script> <!-- JavaScript dosyasını ekle -->
+</body>
+</html>
