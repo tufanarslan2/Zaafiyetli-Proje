@@ -1,11 +1,18 @@
-# Zafiyetli Proje
+# XSS Zafiyeti Örneği
 
-Bu proje, bir zafiyet içeren ve düzeltilmiş bir kod örneği içermektedir.
+Bu proje, bir XSS (Cross-Site Scripting) zafiyeti içeren ve düzeltilmiş bir kod örneği içermektedir.
 
 ## Zafiyet Bilgisi
-- **OWASP Kategorisi**: A1: Injection (SQL Injection)
-- **Zafiyet Vektörü**: `1 OR 1=1`
-- **CVSS Skoru**: 9.8 (Critical)
 
-## Videolu Anlatım
-Aşağıdaki videoda zafiyetin nasıl çalıştığı ve nasıl düzeltildiği gösterilmektedir.
+### OWASP Kategorisi
+- **Kategori**: A03:2021 - Injection
+- **Alt Kategori**: Cross-Site Scripting (XSS)
+
+### Zafiyet Vektörü
+- **Vektör**: Kullanıcı girdisinin doğrudan HTML'e eklenmesi (`innerHTML` kullanımı).
+- **Örnek Saldırı Vektörü**:
+  ```html
+  <img src="x" onerror="alert('XSS Zafiyeti!')">
+
+# CVSS Skoru: 6.1 (Medium)
+# CVSS Vektörü: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
